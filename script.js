@@ -21,3 +21,35 @@ function toggleMenu() {
     }, 2000); // Ganti angka 2000 dengan waktu pemuatan yang diinginkan dalam milidetik
   });
   
+  function toggleTheme() {
+    var body = document.body;
+    body.classList.toggle("dark-theme");
+    
+    // Simpan preferensi tema pada local storage
+    if (body.classList.contains("dark-theme")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  }
+  
+  // Set tema berdasarkan preferensi yang disimpan pada local storage
+  var savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+  
+  const sliderImages = document.querySelectorAll('.slider img');
+let currentSlide = 0;
+
+function showSlide() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].classList.remove('active');
+  }
+  sliderImages[currentSlide].classList.add('active');
+  currentSlide = (currentSlide + 1) % sliderImages.length;
+}
+
+setInterval(showSlide, 3000);
