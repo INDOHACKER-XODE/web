@@ -1,6 +1,19 @@
-.navbar {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
     background-color: #f2f2f2;
     padding: 10px;
+  }
+  
+  .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,32 +36,92 @@
   }
   
   .menu li a {
-    display: block;
     color: #333;
     text-decoration: none;
   }
   
-  .menu-button {
-    display: none;
-    font-size: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  .menu li a.active {
+    font-weight: bold;
   }
   
-  @media only screen and (max-width: 600px) {
-    .menu {
-      display: none;
-    }
   
-    .menu-button {
-      display: block;
-    }
+  .hero {
+    background-image: url("hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    padding: 100px;
   }
   
-  /* CSS sebelumnya */
-
-.loading-container {
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: #f2f2f2;
+  }
+  
+  .feature {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 20px;
+  }
+  
+  .feature img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loading-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,8 +145,12 @@
   }
   
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
   
   .content {
@@ -82,3 +159,128 @@
     transition: opacity 0.5s ease-in-out;
   }
   
+  .loaded .content {
+    display: block;
+  }
+
+  .customer-service {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .customer-service-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .customer-service-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 10px;
+  }
+  
+
+  /* Styles untuk tema terang */
+body {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+ /* Styles untuk tema gelap */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .dark-theme .header {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .dark-theme .navbar {
+    color: #fff;
+  }
+  
+  .dark-theme .menu li a {
+    color: #fff;
+  }
+  
+  /* Contoh penyesuaian gaya pada elemen lainnya */
+  .dark-theme .footer {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* Styles untuk tema gelap */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .header {
+  background-color: #222;
+}
+
+.dark-theme .navbar {
+  color: #fff;
+}
+
+.dark-theme .menu li a {
+  color: #fff;
+}
+
+/* Contoh penyesuaian gaya pada elemen lainnya */
+.dark-theme .footer {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-theme .customer-service {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-theme .features {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .dark-theme .hero {
+    background-color: #444;
+    color: #fff;
+  }
+
+  /* Styles untuk tombol tema */
+.button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .button.dark-theme {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .button.dark-theme:hover {
+    background-color: #f2f2f2;
+  }
