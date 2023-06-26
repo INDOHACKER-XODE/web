@@ -9,17 +9,62 @@
   </div>
 
   <div class="content">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo.png" alt="Logo">
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="menu">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#">Game List</a></li>
+          <li><a href="#customer-service">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="button" onclick="toggleTheme()">Toggle Theme</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Game Top Up</h1>
+        <p>Get the best deals for game top ups and enjoy seamless gaming experience.</p>
+        <a href="/gamelist.html" class="cta-button">Shop Now</a>
       </div>
-      <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
-      <ul class="menu">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Tentang</a></li>
-        <li><a href="#">Kontak</a></li>
-      </ul>
-    </nav>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <img src="feature1.png" alt="Feature 1">
+        <h2>Wide Selection of Games</h2>
+        <p>Choose from a wide range of games for your top up needs.</p>
+      </div>
+      <div class="feature">
+        <img src="feature2.png" alt="Feature 2">
+        <h2>Instant Delivery</h2>
+        <p>Receive your game top ups instantly after purchase.</p>
+      </div>
+      <div class="feature">
+        <img src="feature3.png" alt="Feature 3">
+        <h2>Secure Payments</h2>
+        <p>Enjoy secure and hassle-free payments for your top ups.</p>
+      </div>
+    </section>
+
+    <section class="customer-service">
+        <div class="customer-service-content">
+          <h2>Customer Service</h2>
+          <p>Need assistance? Our customer service team is here to help!</p>
+          <p>Contact us via:</p>
+          <ul class="contact-info">
+            <li>Email: support@gametopup.com</li>
+            <li>Phone: 123-456-7890</li>
+          </ul>
+        </div>
+      </section>
+      
+
+    <footer class="footer">
+      <p>&copy; 2023 Game Top Up. All rights reserved.</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
